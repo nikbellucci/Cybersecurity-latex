@@ -1,0 +1,62 @@
+\documentclass[tikz]{report}
+
+\include{Utility/Package}% Pacchetti usati
+\include{Utility/Theorem}% Definizione strutture del teorema
+\include{Utility/Config}% Configurazione formattazione
+\usepackage{verbatim}
+\usepackage{algpseudocode}
+\usepackage[shortlabels]{enumitem}
+\include{Utility/Commands}% Definizione comandi
+\include{Utility/tableofcontents}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings, color}
+\usepackage{listingsutf8}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{
+    tabsize = 3, %% set tab space width
+    showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+    numbers = left, %% display line numbers on the left
+    commentstyle = \color{dkgreen}, %% set comment color
+    keywordstyle = \color{blue}, %% set keyword color
+    stringstyle = \color{red}, %% set string color
+    rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+    basicstyle = \small \ttfamily, %% set listing font and size
+    breaklines = true, %% enable line breaking
+    numberstyle = \small,
+}
+
+\everymath{\displaystyle}
+
+\begin{document}
+
+
+%Style copertina
+\frontpage
+{Cybersecurity}
+{}
+{Niccolò Bellucci}
+{ALMA MATER STUDIORUM - Università di Bologna}
+{Anno Accademico 2022-2023}
+
+%Style copertina 2
+%\include{Utility/Frontpage}
+
+\thispagestyle{empty}
+%\include{Chapter/description}
+\pagenumbering{roman}
+\tableofcontents
+
+\pagenumbering{arabic}
+\include{Chapter/01}
+\include{Chapter/02}
+\include{Chapter/03}
+\include{Chapter/04}
+\include{Chapter/05}
+\include{Chapter/06}
+\include{Chapter/07}
+
+\end{document}
